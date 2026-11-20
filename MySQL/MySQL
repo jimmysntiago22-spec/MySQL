@@ -1,0 +1,26 @@
+CREATE DATABASE ecommerce;
+USE ecommerce;
+
+CREATE TABLE usuarios (
+	-- atributo tipo_dato longitud_dato
+	id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+	nombre_usuarios VARCHAR (20),
+    apellidos_usuario VARCHAR (20),
+    fecha_nacimiento_usuario DATE,
+    tipo_sangre DATE,
+    email VARCHAR (100),
+    clave VARCHAR (250)
+);
+
+INSERT INTO usuarios (nombre_usuarios, apellidos_usuario, email, clave)
+VALUES ("Leornado", "D´caprio", "leon@gmail.com", "D´caprio123");
+
+-- insertar varios usarios a la vez
+INSERT INTO usuarios (nombre_usuarios, apellidos_usuario, email, clave)
+VALUES 
+("Federico", "Bermudez", "fede@gmail.com", "fede123"),
+("Marcela", "pavas", "Marce@gmail.com", "Marce123"),
+("Sebastian", "Cuero", "sebas@gmail.com", "Sebas123"),
+("Ariana", "Ramires", "ari@gmail.com", "Ari123"),
+("Sara", "Rivas", "sara@gmail.com", "Sara123");
+SELECT * FROM usuarios;
